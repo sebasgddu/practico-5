@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, d, total, cantidad, mayores;
+    double promedio;
+    cout << "Ingrese el numero de uso (cada digito es una app): ";
+    cin >> n;
+    total = 0;
+    cantidad = 0;
+    mayores = 0;
+    while (n > 0) {
+        d = n % 10;
+        total = total + d;
+        cantidad++;
+        if (d > 5) {
+            mayores++;
+        }
+        n = n / 10;
+    }
+    promedio = (double) total / cantidad;
+    cout << "Total de horas = " << total << endl;
+    cout << "Apps con mas de 5 horas = " << mayores << endl;
+    cout << "Promedio = " << promedio << endl;
+    return 0;
+}
