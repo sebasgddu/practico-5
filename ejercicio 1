@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, d, suma;
+    cout << "Ingrese un numero: ";
+    cin >> n;
+    suma = 0;
+    while (n > 0) {
+        d = n % 10;        // ultimo digito
+        suma = suma + d;
+        n = n / 10;        // quita el ultimo digito
+    }
+    cout << "Suma de digitos = " << suma << endl;
+    return 0;
+}
