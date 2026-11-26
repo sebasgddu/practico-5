@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, d, comp, mult;
+    cout << "Ingrese un numero: ";
+    cin >> n;
+    comp = 0;
+    mult = 1;
+    while (n > 0) {
+        d = n % 10;
+        comp = comp + (9 - d) * mult;   // complemento a 9 del digito
+        mult = mult * 10;
+        n = n / 10;
+    }
+    cout << "Complemento a 9 = " << comp << endl;
+    return 0;
+}
